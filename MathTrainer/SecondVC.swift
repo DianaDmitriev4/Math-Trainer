@@ -14,6 +14,7 @@ final class SecondVC: UIViewController {
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     //MARK: - Properties
     var type: MathType = .add {
@@ -66,7 +67,12 @@ final class SecondVC: UIViewController {
     @IBAction func rightAction(_ sender: UIButton) {
         check(answer: sender.titleLabel?.text ?? "", for: sender)
     }
+    
     //MARK: - Methods
+    private func setScoreLabel() {
+        scoreLabel.text = "Score: \(String(count))"
+    }
+    
     private func configureButtons() {
         let buttonsArray = [leftButton, rightButton]
         
@@ -93,10 +99,12 @@ final class SecondVC: UIViewController {
     }
     
     private func configureQuestion() {
-        firstNumber = Int.random(in: 1...99)
-        secondNumber = Int.random(in: 1...99)
-        let question: String = "\(firstNumber) \(sign) \(secondNumber) = "
-        questionLabel.text = question
+        repeat {
+            firstNumber = Int.random(in: 1...99)
+            secondNumber = Int.random(in: 1...99)
+            let question: String = "\(firstNumber) \(sign) \(secondNumber) = "
+            questionLabel.text = question
+        } while type == .divide && (firstNumber % secondNumber != 0)
     }
     
     private func check(answer: String, for button: UIButton) {
@@ -110,6 +118,23 @@ final class SecondVC: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
                 self?.configureQuestion()
                 self?.configureButtons()
+                self?.setScoreLabel()
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? ViewController {
+            viewController.score = count
+            switch type {
+            case .add:
+                viewController.setAddCountFirstVC()
+            case .subtract:
+                viewController.setSubtractCountFirstVC()
+            case .multiply:
+                viewController.setMultiplyCountFirstVC()
+            case .divide:
+                viewController.setDivideCountFirstVC()
             }
         }
     }
