@@ -275,6 +275,9 @@
                                         <integer key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leftAction:" destination="Epg-Ny-2Ie" eventType="touchUpInside" id="whP-3a-oPx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKh-Vr-tTH">
                                 <rect key="frame" x="216.66666666666663" y="532.66666666666663" width="80" height="80"/>
@@ -293,6 +296,9 @@
                                         <integer key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="rightAction:" destination="Epg-Ny-2Ie" eventType="touchUpInside" id="HEe-lr-KwI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FwL-qa-Aby"/>
@@ -311,8 +317,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="vmK-So-Mry"/>
                     <connections>
-                        <outletCollection property="answerButtons" destination="L5B-KK-NnP" collectionClass="NSMutableArray" id="Hty-ja-Bzg"/>
-                        <outletCollection property="answerButtons" destination="nKh-Vr-tTH" collectionClass="NSMutableArray" id="q1V-QN-CYN"/>
+                        <outlet property="leftButton" destination="L5B-KK-NnP" id="Mej-tZ-w4y"/>
+                        <outlet property="questionLabel" destination="xIU-gp-F4a" id="vfq-mm-QKZ"/>
+                        <outlet property="rightButton" destination="nKh-Vr-tTH" id="UQX-XA-fsz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g31-Mw-Qwr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
