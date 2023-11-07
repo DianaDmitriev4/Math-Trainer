@@ -215,6 +215,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addScore" destination="MH5-6R-X5t" id="ccu-F7-2MB"/>
+                        <outlet property="divideScore" destination="rwh-cH-ZGh" id="9hT-x5-15H"/>
+                        <outlet property="multiplyScore" destination="cCj-LX-Q7a" id="wou-CM-c0b"/>
+                        <outlet property="subtractScore" destination="mHS-e1-hM1" id="0UP-Xt-68Z"/>
                         <outletCollection property="buttonsCollection" destination="3Jj-5B-4dN" collectionClass="NSMutableArray" id="4er-HO-yE5"/>
                         <outletCollection property="buttonsCollection" destination="ZFO-A2-2ov" collectionClass="NSMutableArray" id="AZ9-og-18o"/>
                         <outletCollection property="buttonsCollection" destination="OJu-3l-4QA" collectionClass="NSMutableArray" id="FWl-t6-1Hg"/>
@@ -300,6 +304,12 @@
                                     <action selector="rightAction:" destination="Epg-Ny-2Ie" eventType="touchUpInside" id="HEe-lr-KwI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zx-pr-EYg">
+                                <rect key="frame" x="167.66666666666666" y="662.66666666666663" width="57.666666666666657" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FwL-qa-Aby"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -307,12 +317,14 @@
                             <constraint firstItem="nKh-Vr-tTH" firstAttribute="centerX" secondItem="WWv-CQ-EOs" secondAttribute="centerX" constant="60" id="1nj-Hb-1CF"/>
                             <constraint firstItem="xIU-gp-F4a" firstAttribute="centerY" secondItem="WWv-CQ-EOs" secondAttribute="centerY" constant="-30" id="7cx-Gf-deZ"/>
                             <constraint firstItem="xIU-gp-F4a" firstAttribute="centerX" secondItem="WWv-CQ-EOs" secondAttribute="centerX" id="8Hu-Cm-gyl"/>
+                            <constraint firstItem="2Zx-pr-EYg" firstAttribute="top" secondItem="nKh-Vr-tTH" secondAttribute="bottom" constant="50" id="Psd-Sx-Esr"/>
                             <constraint firstItem="FwL-qa-Aby" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xm8-6z-rSR" secondAttribute="trailing" symbolic="YES" id="W0Q-bW-YTk"/>
                             <constraint firstItem="L5B-KK-NnP" firstAttribute="centerX" secondItem="WWv-CQ-EOs" secondAttribute="centerX" constant="-60" id="b83-VV-JH1"/>
                             <constraint firstItem="Xm8-6z-rSR" firstAttribute="top" secondItem="WWv-CQ-EOs" secondAttribute="top" constant="100" id="cAG-Lw-F30"/>
                             <constraint firstItem="L5B-KK-NnP" firstAttribute="top" secondItem="xIU-gp-F4a" secondAttribute="bottom" constant="120" id="ckb-4o-8jE"/>
                             <constraint firstItem="nKh-Vr-tTH" firstAttribute="centerY" secondItem="L5B-KK-NnP" secondAttribute="centerY" id="h5I-Qz-zRt"/>
                             <constraint firstItem="Xm8-6z-rSR" firstAttribute="leading" secondItem="FwL-qa-Aby" secondAttribute="leading" constant="50" id="kox-ah-HXn"/>
+                            <constraint firstItem="2Zx-pr-EYg" firstAttribute="centerX" secondItem="WWv-CQ-EOs" secondAttribute="centerX" id="ma5-do-sR8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vmK-So-Mry"/>
@@ -320,6 +332,7 @@
                         <outlet property="leftButton" destination="L5B-KK-NnP" id="Mej-tZ-w4y"/>
                         <outlet property="questionLabel" destination="xIU-gp-F4a" id="vfq-mm-QKZ"/>
                         <outlet property="rightButton" destination="nKh-Vr-tTH" id="UQX-XA-fsz"/>
+                        <outlet property="scoreLabel" destination="2Zx-pr-EYg" id="KS2-ZG-AjS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g31-Mw-Qwr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

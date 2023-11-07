@@ -14,8 +14,13 @@ enum MathType: Int {
 class ViewController: UIViewController {
     //MARK: - IBOutlet
     @IBOutlet var buttonsCollection: [UIButton]!
-        
+    @IBOutlet weak var addScore: UILabel!
+    @IBOutlet weak var subtractScore: UILabel!
+    @IBOutlet weak var multiplyScore: UILabel!
+    @IBOutlet weak var divideScore: UILabel!
+    
     //MARK: - Properties
+    var score: Int = 0
     private var selectedType: MathType = .add
     
     //MARK: - Life cycle
@@ -30,7 +35,6 @@ class ViewController: UIViewController {
         selectedType = MathType(rawValue: sender.tag) ?? .add
         performSegue(withIdentifier: "goToNext", sender: sender)
     }
-   
     
     @IBAction func unwindAction(unwindSegue: UIStoryboardSegue) { }
     
@@ -49,6 +53,23 @@ class ViewController: UIViewController {
             button.layer.shadowOpacity = 0.4
             button.layer.shadowRadius = 3
         }
+    }
+    
+    // Set count
+    func setAddCountFirstVC(){
+        addScore.text = "\(score)"
+    }
+    
+    func setSubtractCountFirstVC() {
+        subtractScore.text = "\(score)"
+    }
+    
+    func setMultiplyCountFirstVC() {
+        multiplyScore.text = "\(score)"
+    }
+    
+    func setDivideCountFirstVC() {
+        divideScore.text = "\(score)"
     }
 }
 
