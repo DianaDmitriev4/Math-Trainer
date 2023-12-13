@@ -196,6 +196,14 @@
                                     <constraint firstItem="OJu-3l-4QA" firstAttribute="leading" secondItem="j7T-tf-BXH" secondAttribute="leading" id="wjc-cA-LFy"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6c-Fc-CCe">
+                                <rect key="frame" x="159" y="753" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                <connections>
+                                    <action selector="clearButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQK-O3-zI2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -207,14 +215,20 @@
                             <constraint firstItem="sEt-CE-Ipd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Oh-j3-4oG"/>
                             <constraint firstItem="phx-on-f4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CxZ-WY-vDz"/>
                             <constraint firstItem="Qjp-bn-nbs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="NpG-XO-4v2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d6c-Fc-CCe" secondAttribute="bottom" constant="30" id="R72-vf-kfo"/>
                             <constraint firstItem="IxB-bR-zVO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="T8k-G4-oMx"/>
                             <constraint firstItem="IxB-bR-zVO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-60" id="UTl-KE-NaF"/>
                             <constraint firstItem="sEt-CE-Ipd" firstAttribute="top" secondItem="phx-on-f4X" secondAttribute="bottom" constant="70" id="ZRs-2u-Jy6"/>
+                            <constraint firstItem="d6c-Fc-CCe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="liJ-yA-3NR"/>
                             <constraint firstItem="Qjp-bn-nbs" firstAttribute="centerY" secondItem="IxB-bR-zVO" secondAttribute="centerY" id="os6-Yu-atb"/>
                             <constraint firstItem="j7T-tf-BXH" firstAttribute="centerX" secondItem="IxB-bR-zVO" secondAttribute="centerX" id="r8O-E9-w6O"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="additionLabel" destination="MH5-6R-X5t" id="eru-D8-wLI"/>
+                        <outlet property="divideLabel" destination="rwh-cH-ZGh" id="Bfv-1R-iv3"/>
+                        <outlet property="multiplicationLabel" destination="cCj-LX-Q7a" id="Tvy-iC-ckp"/>
+                        <outlet property="subtractionLabel" destination="mHS-e1-hM1" id="aFg-Og-lvT"/>
                         <outletCollection property="buttonsCollection" destination="3Jj-5B-4dN" collectionClass="NSMutableArray" id="4er-HO-yE5"/>
                         <outletCollection property="buttonsCollection" destination="ZFO-A2-2ov" collectionClass="NSMutableArray" id="AZ9-og-18o"/>
                         <outletCollection property="buttonsCollection" destination="OJu-3l-4QA" collectionClass="NSMutableArray" id="FWl-t6-1Hg"/>
@@ -226,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
-        <!--SecondVC-->
+        <!--TrainVC-->
         <scene sceneID="wNu-hV-orq">
             <objects>
-                <viewController id="Epg-Ny-2Ie" customClass="SecondVC" customModule="MathTrainer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Epg-Ny-2Ie" customClass="TrainVC" customModule="MathTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WWv-CQ-EOs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

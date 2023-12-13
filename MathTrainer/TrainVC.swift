@@ -1,5 +1,5 @@
 //
-//  SecondVC.swift
+//  TrainVC.swift
 //  MathTrainer
 //
 //  Created by User on 02.11.2023.
@@ -9,7 +9,7 @@ import Foundation
 
 import UIKit
 
-final class SecondVC: UIViewController {
+final class TrainVC: UIViewController {
     //MARK: - IBOutlet
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
@@ -36,6 +36,8 @@ final class SecondVC: UIViewController {
     private var count: Int = 0 {
         didSet {
             print("Count: \(count)")
+            //Сохраняем очки
+            UserDefaults.standard.set(count, forKey: type.key)
         }
     }
     private var answer: Int {
@@ -56,6 +58,10 @@ final class SecondVC: UIViewController {
         super.viewDidLoad()
         configureQuestion()
         configureButtons()
+        
+        if let count = UserDefaults.standard.object(forKey: type.key) as? Int {
+            self.count = count
+        }
     }
     
     //MARK: - IBActions
@@ -114,3 +120,9 @@ final class SecondVC: UIViewController {
         }
     }
 }
+
+//Создаём свое хранилище(доступно ч/з точечный синтаксис)
+extension UserDefaults {
+    static let container = UserDefaults(suiteName: "container")
+}
+

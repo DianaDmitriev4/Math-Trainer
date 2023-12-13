@@ -13,7 +13,7 @@
 		CECD0A622AF3888E0079952E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECD0A602AF3888E0079952E /* Main.storyboard */; };
 		CECD0A642AF3888E0079952E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECD0A632AF3888E0079952E /* Assets.xcassets */; };
 		CECD0A672AF3888E0079952E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECD0A652AF3888E0079952E /* LaunchScreen.storyboard */; };
-		CECD0A6F2AF388B20079952E /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD0A6E2AF388B20079952E /* SecondVC.swift */; };
+		CECD0A6F2AF388B20079952E /* TrainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECD0A6E2AF388B20079952E /* TrainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		CECD0A632AF3888E0079952E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CECD0A662AF3888E0079952E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CECD0A682AF3888E0079952E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CECD0A6E2AF388B20079952E /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		CECD0A6E2AF388B20079952E /* TrainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				CECD0A5A2AF3888E0079952E /* AppDelegate.swift */,
 				CECD0A5C2AF3888E0079952E /* SceneDelegate.swift */,
 				CECD0A5E2AF3888E0079952E /* ViewController.swift */,
-				CECD0A6E2AF388B20079952E /* SecondVC.swift */,
+				CECD0A6E2AF388B20079952E /* TrainVC.swift */,
 				CECD0A602AF3888E0079952E /* Main.storyboard */,
 				CECD0A632AF3888E0079952E /* Assets.xcassets */,
 				CECD0A652AF3888E0079952E /* LaunchScreen.storyboard */,
@@ -143,7 +143,7 @@
 			files = (
 				CECD0A5F2AF3888E0079952E /* ViewController.swift in Sources */,
 				CECD0A5B2AF3888E0079952E /* AppDelegate.swift in Sources */,
-				CECD0A6F2AF388B20079952E /* SecondVC.swift in Sources */,
+				CECD0A6F2AF388B20079952E /* TrainVC.swift in Sources */,
 				CECD0A5D2AF3888E0079952E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
